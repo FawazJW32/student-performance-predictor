@@ -29,19 +29,13 @@ The model is a RandomForestClassifier trained on a dataset of student performanc
 
 ## 📂 Files Included
 
-student-performance-predictor/
-├── app/
-│ ├── app.py
-│ └── templates/
-│ └── index.html
-├── data/
-│ └── StudentsPerformance.csv
-├── model/
-│ └── student_model.pkl
-├── notebook/
-│ └── training_notebook.ipynb
-├── requirements.txt
-└── README.md
+- `app/app.py`: Flask backend with prediction logic
+- `app/templates/index.html`: Web interface template
+- `data/StudentsPerformance.csv`: The dataset used for training
+- `model/student_model.pkl`: The trained model
+- `notebook/training_notebook.ipynb`: Jupyter notebook used for training and preprocessing
+- `requirements.txt`: List of Python dependencies
+- `README.md`: Project documentation (this file)
 
 ## ▶️ How to Run the Project Locally
 
