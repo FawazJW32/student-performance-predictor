@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">🎓 Student Performance Predictor</h2>
+        <form method="POST">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Gender</label>
+                    <select name="gender" class="form-select">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Parental Education</label>
+                    <select name="parental level of education" class="form-select">
+                        <option value="associate's degree">Associate's Degree</option>
+                        <option value="bachelor's degree">Bachelor's Degree</option>
+                        <option value="master's degree">Master's Degree</option>
+                        <option value="some college">Some College</option>
+                        <option value="some high school">Some High School</option>
+                        <option value="high school">High School</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Lunch</label>
+                    <select name="lunch" class="form-select">
+                        <option value="standard">Standard</option>
+                        <option value="free/reduced">Free/Reduced</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Test Preparation</label>
+                    <select name="test preparation course" class="form-select">
+                        <option value="none">None</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label class="form-label">Math Score</label>
+                    <input type="number" name="math score" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Reading Score</label>
+                    <input type="number" name="reading score" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Writing Score</label>
+                    <input type="number" name="writing score" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary px-5">Predict</button>
+            </div>
+        </form>
+
+        {% if prediction is not none %}
+        <div class="alert alert-info mt-4 text-center">
+            <strong>Result:</strong> The student is predicted to <strong>{{ prediction }}</strong>.
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>
